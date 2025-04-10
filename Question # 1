@@ -1,0 +1,47 @@
+//C++Assignment
+#include<iostream>
+using namespace std;
+string n;
+int r;
+char g;
+class Student{
+private:
+string name;
+int rollnum;
+char grade;
+public:
+void set(string name,int rollnum,char grade){
+this->name = name;
+this->rollnum = rollnum;
+this->grade = grade;
+}
+void input(){
+cout << "enter you name : ";
+cin>> n;
+cout << "enter you roll number: ";
+cin>> r;
+cout << "enter you grade : ";
+cin>> g;
+}
+void Display(){
+cout << "🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸" << endl;
+cout << "your name is : " << name << endl;
+cout << "your roll number is : " << rollnum << endl;
+cout << "your grade is : " << grade << endl;
+}
+};
+int main()
+{
+char ch;
+do{
+    Student S1;
+    S1.input();
+    S1.set(n,r,g);
+    S1.Display();
+    
+        cout << "Do you want to continue(y/n) :";
+        cin >>ch; 
+cout << "🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸" << endl;
+    }while(ch=='y');
+    return 0;
+}
