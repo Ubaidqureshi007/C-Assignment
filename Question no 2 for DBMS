@@ -1,0 +1,26 @@
+CREATE TABLE STUDENTS (
+    StudentID int PRIMARY KEY,
+    Name varchar(50),
+    Age int,
+    Grade varchar(2),
+    City varchar(30)
+);
+
+INSERT INTO STUDENTS VALUES
+(1, 'Ahmed Khan', 20, 'B', 'Lahore'),
+(2, 'Sara Ali', 19, 'C', 'Karachi'),
+(3, 'Usman Malik', 22, 'A', 'Islamabad'),
+(4, 'Fatima Raza', 21, 'F', 'Lahore'),
+(5, 'Bilal Hassan', 18, 'D', 'Peshawar'),
+(6, 'Ayesha Siddiqui', 20, 'F', 'Lahore'),
+(7, 'Zainab Akhtar', 19, 'B', 'Karachi');
+
+SELECT AVG(Age) AS AverageAge FROM STUDENTS;
+
+UPDATE STUDENTS SET Grade = 'A' WHERE City = 'Lahore';
+
+DELETE FROM STUDENTS WHERE Grade = 'F';
+
+SELECT DISTINCT City FROM STUDENTS;
+
+SELECT * FROM STUDENTS ORDER BY Age ASC LIMIT 3;
