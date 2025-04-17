@@ -1,0 +1,24 @@
+CREATE TABLE EMPLOYEES (
+    EmployeeID int PRIMARY KEY,
+    Name varchar(50),
+    Department varchar(30),
+    Salary int,
+    HireDate date
+);
+
+INSERT INTO EMPLOYEES VALUES
+(101, 'Ali Khan', 'IT', 75000, '2023-05-15'),
+(102, 'Sara Ahmed', 'HR', 65000, '2022-11-20'),
+(103, 'Usman Malik', 'IT', 80000, '2021-08-10'),
+(104, 'Fatima Raza', 'Finance', 90000, '2024-01-05'),
+(105, 'Bilal Hassan', 'IT', 70000, '2023-03-12');
+
+SELECT Name FROM EMPLOYEES WHERE Department = 'IT';
+
+SELECT * FROM EMPLOYEES ORDER BY Salary DESC LIMIT 1;
+
+SELECT * FROM EMPLOYEES WHERE HireDate > '2022-01-01';
+
+SELECT Department, COUNT(*) AS EmployeeCount 
+FROM EMPLOYEES 
+GROUP BY Department;
